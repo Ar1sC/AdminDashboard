@@ -12,6 +12,7 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
+import { productInputs, userInputs } from "./formSource.js"
 
 
 function App() {
@@ -25,12 +26,12 @@ function App() {
           <Route path="users">
             <Route index element={<Lists/>} />
             <Route path=":userID" element={<Single/>} />
-            <Route path="new" element={<New/>} />
+            <Route path="new" element={<New inputs = {userInputs} title="Add New User"/>} />
           </Route>
           <Route path="products">
             <Route index element={<Lists/>} />
             <Route path=":productID" element={<Single/>} />
-            <Route path="new" element={<New/>} />
+            <Route path="new" element={<New inputs = {productInputs} title="Add New Product"/>} />
           </Route>
         </Route>
       </Routes>
