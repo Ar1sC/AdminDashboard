@@ -1,11 +1,12 @@
 import "./new.scss";
-import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
+
   return (
     <div className="new">
       <Sidebar />
@@ -22,7 +23,8 @@ const New = ({ inputs, title }) => {
                   ? URL.createObjectURL(file)
                   : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
               }
-            ></img>
+              alt=""
+            />
           </div>
           <div className="right">
             <form>
@@ -44,7 +46,6 @@ const New = ({ inputs, title }) => {
                   <input type={input.type} placeholder={input.placeholder} />
                 </div>
               ))}
-
               <button>Send</button>
             </form>
           </div>

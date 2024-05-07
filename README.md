@@ -1,4 +1,5 @@
 ![Chardalis Admin](admin_interface.png)
+![Chardalis Admin](darkMode.png)
 
 # Getting Started with Create React App
 
